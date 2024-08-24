@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-lg font-bold">Yet To Name</div>
+        <div className="text-white text-lg font-bold">LeetRank</div>
         <div className="hidden md:flex space-x-4">
           <a href="#" className="text-gray-300 hover:text-white">Home</a>
           <a href="#" className="text-gray-300 hover:text-white">Update</a>
@@ -26,14 +26,16 @@ const Navbar = () => {
         </div>
       </div>
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden">
-          <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Home</a>
-          <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Update</a>
-          <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Board</a>
-          <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Contact</a>
-        </div>
-      )}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-700 ease-in-out ${
+          isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Home</a>
+        <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Update</a>
+        <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Board</a>
+        <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Contact</a>
+      </div>
     </nav>
   );
 }
