@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,14 +9,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-gray-800 p-4 fixed w-full">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-lg font-bold">LeetRank</div>
-        <div className="hidden md:flex space-x-4">
-          <a href="#" className="text-gray-300 hover:text-white">Home</a>
-          <a href="#" className="text-gray-300 hover:text-white">Update</a>
-          <a href="#" className="text-gray-300 hover:text-white">Board</a>
-          <a href="#" className="text-gray-300 hover:text-white">Contact</a>
+        <div className="hidden md:flex space-x-10">
+          <Link to="/" className="text-gray-300 hover:text-white">Home</Link>
+          <Link to="/update" className="text-gray-300 hover:text-white">Update</Link>
+          <Link to="/board" className="text-gray-300 hover:text-white">Leader Board</Link>
+          <Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link>
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-gray-300 hover:text-white focus:outline-none">
@@ -27,14 +28,13 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-700 ease-in-out ${
-          isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Home</a>
-        <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Update</a>
-        <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Board</a>
-        <a href="#" className="block text-gray-300 hover:text-white py-2 px-4">Contact</a>
+        className={`md:hidden grid gap-5 overflow-hidden transition-all duration-700 ease-in-out ${
+          isOpen ? 'max-h-64 opacity-100 pt-10' : 'max-h-0 opacity-0'
+        }`}>
+        <Link to="/" className="text-gray-300 hover:text-white">Home</Link>
+        <Link to="/update" className="text-gray-300 hover:text-white">Update</Link>
+        <Link to="/board" className="text-gray-300 hover:text-white">Leader Board</Link>
+        <Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link>
       </div>
     </nav>
   );

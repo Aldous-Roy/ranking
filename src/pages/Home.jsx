@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 const Home = () => {
   return (
     <div>
-        <Navbar />
+        <p className='text-3xl font-bold pt-20 text-center'>Home Content</p>
     </div>
   )
 }
