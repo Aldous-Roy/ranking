@@ -3,6 +3,7 @@ import Board from './pages/Board'
 import Home from './pages/Home'
 import Update from './pages/Update'
 import Contact from './pages/Contact'
+import About from './pages/About'
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/update" element={<Update />} />
           <Route path="/board" element={<Board />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>
