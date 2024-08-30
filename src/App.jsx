@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div>
-        <h1>Eruma</h1>
+        
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
