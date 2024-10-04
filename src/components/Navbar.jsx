@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-10">
           <Link to="/" className="text-gray-300 hover:text-white transition duration-300 hover:-translate-y-2 hover:scale-110 active:scale-90">Home</Link>
           <Link to="/update" className="text-gray-300 hover:text-white transition duration-300 hover:-translate-y-2 hover:scale-110 active:scale-90">Update</Link>
-          <Link to="/board" className="text-gray-300 hover:text-white transition duration-300 hover:-translate-y-2 hover:scale-110 active:scale-90">Leader Board</Link>
+          <Link to="/board" className='text-gray-300 hover:text-white'>Board</Link>
           <Link to="/contact" className="text-gray-300 hover:text-white transition duration-300 hover:-translate-y-2 hover:scale-110 active:scale-90">Contact</Link>
           <Link to="/about" className="text-gray-300 hover:text-white transition duration-300 hover:-translate-y-2 hover:scale-110 active:scale-90">About Us</Link>
         </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
         }`} onClick={toggleMenu}>
         <Link to="/" className="text-gray-300 hover:text-white">Home</Link>
         <Link to="/update" className="text-gray-300 hover:text-white">Update</Link>
-        <Link to="/board" className="text-gray-300 hover:text-white">Leader Board</Link>
+        <Link to="/board" className='text-gray-300 hover:text-white'>Board</Link>
         <Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link>
         <Link to="/about" className="text-gray-300 hover:text-white">About Us</Link>
       </div>
