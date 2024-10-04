@@ -12,16 +12,18 @@ function App() {
   return (
     <Router>
       <div>
-        {/* <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/update" element={<Update />} />
           <Route path="/board" element={<Board />} /> 
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-        </Routes> */}
-        {/* <Signin/> */}
-        <SignUp/>
+          <Route path="/signup" element={<SignUp/>} />
+          <Route path="/signin" element={<Signin/>} />
+        </Routes>
+        {/* <Signin/>
+        <SignUp/> */}
       </div>
     </Router>
   )

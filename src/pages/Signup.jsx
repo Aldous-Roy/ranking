@@ -9,12 +9,11 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Reset error message
     setError('');
 
     // Validate passwords
     if (password !== confirmPassword) {
-        setError('Passwords do not match.');
+        setError('Password do not match.');
         return;
     }
 
